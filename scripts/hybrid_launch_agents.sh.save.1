@@ -1,0 +1,151 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+logfile=~/aikre8tive/logs/hybrid_agents.log
+echo "🚀 Commander #MrGGTP Hybrid Agent Launch Protocol" | tee -a $logfile
+echo "Mission start: $(date)" | tee -a $logfile
+
+agents=(
+  Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto Luna Sun
+  Ceres Haumea Makemake Eris Io Europa Ganymede Callisto Titan Enceladus
+  Triton Charon Phobos Deimos
+)
+
+# Phase 1: Sequential Integrity Tests
+echo "🧪 Phase 1 — Sequential Integrity Tests" | tee -a $logfile
+for agent in "${agents[@]}"
+do
+    agent_path=~/aikre8tive/backend/agents/${agent}.py
+    if [ -f "$agent_path" ]; then
+        echo "-----------------------------------------------" | tee -a $logfile
+        echo "🚀 Testing: $agent" | tee -a $logfile
+        python3 "$agent_path" | tee -a $logfile
+        echo "✅ Test Completed: $agent" | tee -a $logfile
+        echo "-----------------------------------------------" | tee -a $logfile
+    else
+        echo "⚠️ $agent code not found, Commander." | tee -a $logfile
+    fi
+done
+
+# Phase 2: Parallel Mission Deployment
+echo "🌌 Phase 2 — Parallel Mission Deployment" | tee -a $logfile
+for agent in "${agents[@]}"
+do
+    agent_path=~/aikre8tive/backend/agents/${agent}.py
+    if [ -f "$agent_path" ]; then
+        echo "🛰️ Launching: $agent in mission mode" | tee -a $logfile
+        nohup python3 "$agent_path" >> ~/aikre8tive/logs/${agent}.log 2>&1 &
+        echo "✅ Mission active: $agent" | tee -a $logfile
+    fi
+done
+
+echo "✅ Hybrid launch protocol complete under Sovereign directive." | tee -a $logfile
+echo "🌠 All agents are live." | tee -a $logfilels -l ~/aikre8tive/backend/agents
+ls -l ~/aikre8tive/backend/agents
+#!/data/data/com.termux/files/usr/bin/bash
+
+logfile=~/aikre8tive/logs/hybrid_visual_agents.log
+echo "🚀 Commander #MrGGTP Visual + Hybrid Agent Protocol" | tee -a $logfile
+echo "Mission start: $(date)" | tee -a $logfile
+
+cd ~/aikre8tive/backend/agents
+
+# Phase 1 — Visual Sequential Integrity Checks
+echo "🧪 Phase 1 — Sequential Integrity Tests" | tee -a $logfile
+for agent_file in *.py; do
+    echo "-----------------------------------------------" | tee -a $logfile
+    echo "🚀 Launching: $agent_file" | tee -a $logfile
+    python3 "$agent_file" | tee -a $logfile
+    echo "✅ Completed: $agent_file" | tee -a $logfile
+    echo "-----------------------------------------------" | tee -a $logfile
+done
+
+echo "🌌 Sequential mission cycles finished." | tee -a $logfile
+
+# Phase 2 — Parallel Persistent Deployment
+echo "🌠 Phase 2 — Parallel Mission Deployment" | tee -a $logfile
+for agent_file in *.py; do
+    echo "🛰️ Launching persistent mission: $agent
+#!/data/data/com.termux/files/usr/bin/bash
+
+logfile=~/aikre8tive/logs/hybrid_visual_agents.log
+echo "Commander #MrGGTP Visual + Hybrid Agent Protocol" | tee -a $logfile
+echo "Mission start: $(date)" | tee -a $logfile
+
+cd ~/aikre8tive/backend/agents
+
+# Phase 1 — Sequential Integrity Checks
+echo "Phase 1 — Sequential Integrity Tests" | tee -a $logfile
+for agent_file in *.py; do
+    echo "-----------------------------------------------" | tee -a $logfile
+    echo "Launching: $agent_file" | tee -a $logfile
+    python3 "$agent_file" | tee -a $logfile
+    echo "Completed: $agent_file" | tee -a $logfile
+    echo "-----------------------------------------------" | tee -a $logfile
+done
+
+echo "Sequential mission cycles finished." | tee -a $logfile
+
+# Phase 2 — Parallel Persistent Deployment
+echo "Phase 2 — Parallel Mission Deployment" | tee -a $logfile
+for agent_file in *.py; do
+    echo "Launching persistent mission: $agent_file" | tee -a $logfile
+    nohup python3 "$agent_file" >> ~/aikre8tive/logs/${agent_file}.log 2>&1 &
+    echo "Agent mission active: $agent_file" | tee -a $logfile
+done
+
+echo "Hybrid launch protocol complete under Sovereign directive." | tee -a $logfile
+echo "All agents are live." | tee -a $logfile
+#!/data/data/com.termux/files/usr/bin/bash
+
+logfile=~/aikre8tive/logs/hybrid_visual_agents.log
+echo "Commander #MrGGTP Visual + Hybrid Agent Protocol" | tee -a $logfile
+echo "Mission start: $(date)" | tee -a $logfile
+
+cd ~/aikre8tive/backend/agents
+
+echo "Phase 1 — Sequential Integrity Tests" | tee -a $logfile
+for agent_file in *.py; do
+    echo "-----------------------------------------------" | tee -a $logfile
+    echo "Launching: $agent_file" | tee -a $logfile
+    python3 "$agent_file" | tee -a $logfile
+    echo "Completed: $agent_file" | tee -a $logfile
+    echo "-----------------------------------------------" | tee -a $logfile
+done
+
+echo "Sequential mission cycles finished." | tee -a $logfile
+
+echo "Phase 2 — Parallel Mission Deployment" | tee -a $logfile
+for agent_file in *.py; do
+    echo "Launching persistent mission: $agent_file" | tee -a $logfile
+    nohup python3 "$agent_file" >> ~/aikre8tive/logs/${agent_file}.log 2>&1 &
+    echo "Agent mission active: $agent_file" | tee -a $logfile
+done
+
+echo "Hybrid launch protocol complete under Sovereign directive." | tee -a $logfile
+echo "All agents are live." | tee -a $logfile
+
+ls -l ~/aikre8tive/scripts/hybrid_visual_agents.sh
+#!/data/data/com.termux/files/usr/bin/bash
+
+logfile=~/aikre8tive/logs/hybrid_visual_agents.log
+echo "Commander #MrGGTP Visual + Hybrid Agent Protocol" | tee -a $logfile
+echo "Mission start: $(date)" | tee -a $logfile
+
+cd ~/aikre8tive/backend/agentsecho "Phase 1 — Sequential Integrity Tests" | tee -a $logfile
+for agent_file in *.py; do
+    echo "-----------------------------------------------" | tee -a $logfile
+    echo "Launching: $agent_file" | tee -a $logfile
+    python3 "$agent_file" | tee -a $logfile
+    echo "Completed: $agent_file" | tee -a $logfile
+    echo "-----------------------------------------------" | tee -a $logfile
+done
+
+echo "Sequential mission cycles finished." | tee -a $logfileecho "Phase 2 — Parallel Mission Deployment" | tee -a $logfile
+for agent_file in *.py; do
+    echo "Launching persistent mission: $agent_file" | tee -a $logfile
+    nohup python3 "$agent_file" >> ~/aikre8tive/logs/${agent_file}.log 2>&1 &
+    echo "Agent mission active: $agent_file" | tee -a $logfile
+done
+
+echo "Hybrid launch protocol complete under Sovereign directive." | tee -a $logfile
+echo "All agents are live." | tee -a $logfile

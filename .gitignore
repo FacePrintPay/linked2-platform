@@ -1,0 +1,7 @@
+node_modules/
+.logs/
+cache/
+*.log
+*.tgz
+*.env
+termux/.vercel
