@@ -1,1 +1,0 @@
-017ff899ec3c00bcfa2a7f22645291d562cda291061cf1e9001dc85de8f7373e  /data/data/com.termux/files/home/aikre8tive/scripts/manifest.json
