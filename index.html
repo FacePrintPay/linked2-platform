@@ -1,1 +1,538 @@
-<html><body><h1>Linked2-platform</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiNQ2.xyz — One Form. Submit It Everywhere.</title>
+
+<meta name="description" content="Apply to gig jobs or list items on multiple marketplaces using one form. One-time use. No accounts.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+
+body{
+  background:#0f172a;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px;
+  background:#1e293b;
+  border-bottom:1px solid #334155;
+}
+header h1{
+  font-size:2rem;
+  margin-bottom:8px;
+  background:linear-gradient(90deg,#3b82f6,#14b8a6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+header p{
+  color:#94a3b8;
+  font-size:1rem;
+}
+
+/* HERO */
+.hero{
+  padding:60px 20px;
+  text-align:center;
+  background:linear-gradient(180deg,#1e293b,#0f172a);
+}
+
+.hero h2{
+  font-size:2.5rem;
+  margin-bottom:20px;
+  line-height:1.2;
+}
+
+.hero .gradient-text{
+  background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero .gradient-text-2{
+  background:linear-gradient(90deg,#ec4899,#ef4444);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero p{
+  font-size:1.1rem;
+  color:#94a3b8;
+  max-width:700px;
+  margin:0 auto 30px;
+  line-height:1.6;
+}
+
+/* BADGES */
+.badge{
+  display:inline-block;
+  padding:8px 20px;
+  border-radius:50px;
+  border:1px solid rgba(148,163,184,.3);
+  font-size:.85rem;
+  margin-bottom:30px;
+  color:#94a3b8;
+  letter-spacing:.5px;
+}
+
+/* LOGO STRIP */
+.logo-strip{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin:30px auto;
+  max-width:900px;
+}
+
+.logo{
+  background:rgba(148,163,184,.1);
+  border:1px solid rgba(148,163,184,.2);
+  color:#e2e8f0;
+  padding:8px 16px;
+  border-radius:8px;
+  font-size:.8rem;
+  font-weight:600;
+}
+
+/* MAIN SPLIT */
+.main{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  background:#0f172a;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+/* PANES */
+.pane{
+  padding:50px 30px;
+  background:#1e293b;
+}
+
+.pane h3{
+  font-size:1.8rem;
+  margin-bottom:10px;
+}
+
+.pane .subtitle{
+  color:#94a3b8;
+  margin-bottom:30px;
+  font-size:1.05rem;
+}
+
+/* STEPS */
+.steps{
+  margin-bottom:30px;
+}
+
+.step{
+  background:rgba(15,23,42,.6);
+  border:1px solid rgba(148,163,184,.2);
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:15px;
+}
+
+.step-label{
+  color:#64748b;
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:5px;
+}
+
+.step-content{
+  font-size:1rem;
+  color:#e2e8f0;
+}
+
+/* FORM */
+form{
+  background:rgba(15,23,42,.4);
+  border:1px solid rgba(148,163,184,.2);
+  padding:25px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+input,select{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  border:1px solid rgba(148,163,184,.3);
+  border-radius:8px;
+  background:#0f172a;
+  color:#fff;
+  font-size:.95rem;
+}
+
+input::placeholder{
+  color:#64748b;
+}
+
+input:focus,select:focus{
+  outline:none;
+  border-color:#3b82f6;
+}
+
+/* CHECKBOXES */
+.checkbox-group{
+  margin:20px 0;
+}
+
+.checkbox-group label{
+  display:block;
+  margin-bottom:10px;
+  font-size:.9rem;
+  color:#cbd5e1;
+  cursor:pointer;
+  padding:10px;
+  border-radius:6px;
+  transition:background .2s;
+}
+
+.checkbox-group label:hover{
+  background:rgba(148,163,184,.1);
+}
+
+.checkbox-group input[type="checkbox"]{
+  width:auto;
+  margin-right:10px;
+  cursor:pointer;
+}
+
+/* BUTTONS */
+button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:50px;
+  font-weight:700;
+  font-size:1.05rem;
+  cursor:pointer;
+  transition:all .3s;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{
+    box-shadow:0 0 20px rgba(59,130,246,.5);
+  }
+  50%{
+    box-shadow:0 0 40px rgba(59,130,246,.8),0 0 60px rgba(59,130,246,.4);
+  }
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#ec4899,#ef4444,#f97316);
+  color:#fff;
+  animation:pulse-pink 2s infinite;
+}
+
+@keyframes pulse-pink{
+  0%,100%{
+    box-shadow:0 0 25px rgba(236,72,153,.6),0 0 50px rgba(236,72,153,.3);
+  }
+  50%{
+    box-shadow:0 0 50px rgba(236,72,153,.9),0 0 80px rgba(236,72,153,.5),0 0 100px rgba(239,68,68,.3);
+  }
+}
+
+.btn-secondary{
+  background:linear-gradient(90deg,#ec4899,#ef4444);
+  color:#fff;
+  animation:pulse-red 2s infinite;
+}
+
+@keyframes pulse-red{
+  0%,100%{
+    box-shadow:0 0 20px rgba(236,72,153,.5);
+  }
+  50%{
+    box-shadow:0 0 40px rgba(236,72,153,.8),0 0 60px rgba(236,72,153,.4);
+  }
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* FOOTER */
+footer{
+  background:#1e293b;
+  padding:40px 20px;
+  text-align:center;
+  border-top:1px solid #334155;
+}
+
+footer p{
+  color:#64748b;
+  font-size:.85rem;
+  max-width:800px;
+  margin:15px auto;
+  line-height:1.6;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .main{
+    grid-template-columns:1fr;
+  }
+  
+  .hero h2{
+    font-size:1.8rem;
+  }
+  
+  .pane{
+    padding:40px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="display:inline-block;width:8px;height:8px;background:#10b981;border-radius:50%;"></span>
+    <span style="font-size:.9rem;color:#94a3b8;letter-spacing:.5px">LiNQ2.XYZ</span>
+  </div>
+  <div style="display:inline-block;margin-bottom:10px">
+    <img src="https://i.imgur.com/placeholder.png" alt="LiNQ2" style="height:80px;width:auto;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div style="display:none">
+      <svg viewBox="0 0 400 100" style="height:80px;width:auto">
+        <defs>
+          <linearGradient id="linkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ef4444"/>
+            <stop offset="50%" style="stop-color:#ec4899"/>
+            <stop offset="100%" style="stop-color:#8b5cf6"/>
+          </linearGradient>
+          <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3b82f6"/>
+            <stop offset="50%" style="stop-color:#8b5cf6"/>
+            <stop offset="100%" style="stop-color:#ec4899"/>
+          </linearGradient>
+        </defs>
+        <path d="M20,30 Q20,20 30,20 L50,20 Q60,20 60,30 L60,50 Q60,60 50,60 L40,60 M40,60 L70,30" fill="none" stroke="url(#linkGrad)" stroke-width="8" stroke-linecap="round"/>
+        <text x="80" y="65" font-size="50" font-weight="700" fill="url(#textGrad)">LiNQ2</text>
+        <text x="320" y="50" font-size="35" fill="#fbbf24">💵</text>
+      </svg>
+    </div>
+  </div>
+  <p>ONE FORM. SUBMIT EVERYWHERE.</p>
+</header>
+
+<section class="hero">
+  <div class="badge">THE PROBLEM</div>
+  
+  <h2>
+    Stop repeating yourself<br>
+    <span class="gradient-text">across dozens of platforms.</span>
+  </h2>
+
+  <p style="font-size:1.2rem;color:#fff;margin-bottom:15px">
+    Signing up for DoorDash? Enter your info.<br>
+    Now Instacart? Enter it again.<br>
+    Uber Eats? Yep, same info. Again.<br>
+    <span class="gradient-text-2" style="font-size:1.4rem;font-weight:700">Repeat, repeat, repeat.</span>
+  </p>
+
+  <p>
+    Whether you're applying to <strong>gig platforms</strong> or listing items on <strong>marketplaces</strong>, you know the drill. Same name. Same email. Same phone. Same address. Over and over.
+  </p>
+
+  <div class="logo-strip">
+    <div class="logo">DoorDash</div>
+    <div class="logo">Instacart</div>
+    <div class="logo">GoPuff</div>
+    <div class="logo">Uber Eats</div>
+    <div class="logo">Amazon Flex</div>
+    <div class="logo">Lyft</div>
+    <div class="logo">Facebook</div>
+    <div class="logo">Craigslist</div>
+    <div class="logo">eBay</div>
+    <div class="logo">Mercari</div>
+    <div class="logo">OfferUp</div>
+    <div class="logo">Nextdoor</div>
+  </div>
+
+  <div style="margin:40px auto;max-width:900px;position:relative;height:300px;background:linear-gradient(135deg,#ff0000,#ff8800,#ffff00,#00ff00,#0088ff,#8800ff,#ff00ff);border-radius:20px;overflow:hidden;box-shadow:0 10px 50px rgba(0,0,0,.3)">
+    <div style="position:absolute;inset:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px;padding:20px">
+      <div style="font-size:1.8rem;font-weight:900;color:#fff;text-shadow:3px 3px 6px rgba(0,0,0,.5)">DOORDASH</div>
+      <div style="font-size:1.5rem;font-weight:700;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)">instacart</div>
+      <div style="font-size:2rem;font-weight:900;color:#fff;text-shadow:3px 3px 6px rgba(0,0,0,.5)">ebay</div>
+      <div style="font-size:1.4rem;font-weight:700;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)">🏠 Marketplace</div>
+      <div style="font-size:1.8rem;font-weight:900;color:#fff;text-shadow:3px 3px 6px rgba(0,0,0,.5)">Uber<br>Eats</div>
+      <div style="font-size:1.6rem;font-weight:700;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)">GoPuff</div>
+      <div style="font-size:1.3rem;font-weight:700;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)">amazonFLEX</div>
+      <div style="font-size:1.9rem;font-weight:900;color:#ff69b4;text-shadow:3px 3px 6px rgba(0,0,0,.5)">lyft</div>
+      <div style="font-size:1.2rem;font-weight:700;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)">☮️ craigslist</div>
+      <div style="font-size:1.5rem;font-weight:700;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)">Nextdoor</div>
+      <div style="font-size:1.4rem;font-weight:700;color:#4dd0e1;text-shadow:2px 2px 4px rgba(0,0,0,.5)">OfferUp</div>
+    </div>
+  </div>
+
+  <div style="margin-top:50px;background:linear-gradient(135deg,rgba(236,72,153,.15),rgba(239,68,68,.15));border:2px solid rgba(236,72,153,.5);border-radius:20px;padding:40px;max-width:800px;margin-left:auto;margin-right:auto;box-shadow:0 0 60px rgba(236,72,153,.3)">
+    <div class="badge" style="border-color:#ec4899;color:#ec4899;background:rgba(236,72,153,.1)">THE SOLUTION</div>
+    <p style="font-size:1.8rem;color:#fff;margin:20px 0;font-weight:700">
+      One Form. Submit It Everywhere.
+    </p>
+    <p style="font-size:1.1rem;color:#cbd5e1;margin-bottom:25px">
+      Fill out your information <strong>one time</strong>. Choose which platforms you want to apply to or list on. We handle the rest.
+    </p>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;text-align:left;margin-top:25px">
+      <div>
+        <div style="color:#ec4899;font-size:1.5rem;margin-bottom:5px">💰</div>
+        <div style="font-size:.95rem">Apply to <strong>gig jobs</strong> like DoorDash, Uber Eats, Instacart</div>
+      </div>
+      <div>
+        <div style="color:#ec4899;font-size:1.5rem;margin-bottom:5px">🛒</div>
+        <div style="font-size:.95rem">List items on <strong>marketplaces</strong> like eBay, Facebook, Craigslist</div>
+      </div>
+      <div>
+        <div style="color:#ec4899;font-size:1.5rem;margin-bottom:5px">💵</div>
+        <div style="font-size:.95rem"><strong>One-time fee</strong>. No subscriptions. No hidden costs.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:30px;font-size:1.3rem;color:#fbbf24">
+      👇 Choose your service below 👇
+    </p>
+  </div>
+</section>
+
+<div class="main">
+
+<!-- GET A GIG -->
+<div class="pane">
+  <div class="badge" style="background:rgba(6,182,212,.1);border-color:#06b6d4;color:#06b6d4">GET A GIG</div>
+  <h3>Apply to gig platforms.</h3>
+  <p class="subtitle">From your phone, safely inside the system.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-label">STEP 1</div>
+      <div class="step-content">Enter your personal information.</div>
+    </div>
+    <div class="step">
+      <div class="step-label">STEP 2</div>
+      <div class="step-content">Select platforms & complete verification.</div>
+    </div>
+    <div class="step">
+      <div class="step-label">STEP 3</div>
+      <div class="step-content">Pay one-time fee & submit everywhere.</div>
+    </div>
+  </div>
+
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+    <input type="text" placeholder="City / State">
+
+    <div class="checkbox-group">
+      <label><input type="checkbox"> DoorDash</label>
+      <label><input type="checkbox"> Uber Eats</label>
+      <label><input type="checkbox"> Instacart</label>
+      <label><input type="checkbox"> GoPuff</label>
+      <label><input type="checkbox"> Amazon Flex</label>
+      <label><input type="checkbox"> Lyft</label>
+      <label><input type="checkbox"> Spark Driver</label>
+      <label><input type="checkbox"> Roadie</label>
+    </div>
+
+    <button class="btn-primary">Apply Once — $4.99</button>
+  </form>
+
+  <p style="font-size:.8rem;color:#64748b;text-align:center">
+    Already enrolled? <a href="#" style="color:#06b6d4">Sign in</a> with your linked identity.
+  </p>
+</div>
+
+<!-- SELL YOUR GOODS -->
+<div class="pane">
+  <div class="badge" style="background:rgba(236,72,153,.1);border-color:#ec4899;color:#ec4899">SELL YOUR GOODS</div>
+  <h3>List on marketplaces.</h3>
+  <p class="subtitle">From your phone, safely inside the system.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-label">STEP 1</div>
+      <div class="step-content">Enter your item details once.</div>
+    </div>
+    <div class="step">
+      <div class="step-label">STEP 2</div>
+      <div class="step-content">Select marketplaces to post on.</div>
+    </div>
+    <div class="step">
+      <div class="step-label">STEP 3</div>
+      <div class="step-content">Submit & your listing goes live everywhere.</div>
+    </div>
+  </div>
+
+  <form>
+    <input type="text" placeholder="Item Title" required>
+    <input type="text" placeholder="Category">
+    <input type="text" placeholder="Price">
+    <input type="text" placeholder="Location">
+
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Facebook Marketplace</label>
+      <label><input type="checkbox"> Craigslist</label>
+      <label><input type="checkbox"> OfferUp</label>
+      <label><input type="checkbox"> Mercari</label>
+      <label><input type="checkbox"> eBay</label>
+      <label><input type="checkbox"> Nextdoor</label>
+    </div>
+
+    <button class="btn-secondary">List My Goods</button>
+  </form>
+
+  <p style="font-size:.8rem;color:#64748b;text-align:center">
+    Already enrolled? <a href="#" style="color:#ec4899">Sign in</a> with your linked identity.
+  </p>
+</div>
+
+</div>
+
+<footer>
+  <div class="badge" style="margin-bottom:25px">INFORMATION GATEWAY</div>
+  
+  <div class="logo-strip" style="margin-bottom:30px">
+    <div class="logo">DoorDash</div>
+    <div class="logo">Instacart</div>
+    <div class="logo">Amazon Flex</div>
+    <div class="logo">Facebook</div>
+    <div class="logo">Craigslist</div>
+    <div class="logo">eBay</div>
+    <div class="logo">Nextdoor</div>
+  </div>
+
+  <p>
+    We do not store personal data. Information is prepared and routed only.
+    Final submission, verification, and approval are handled by each platform.
+  </p>
+
+  <p>
+    Logos are used for identification only. LiNQ2 is not affiliated with or endorsed by these brands.
+  </p>
+
+  <p style="margin-top:25px">
+    <a href="#" style="color:#3b82f6;text-decoration:none">Privacy Policy</a> · 
+    <a href="#" style="color:#3b82f6;text-decoration:none">Terms of Service</a>
+  </p>
+</footer>
+
+</body>
+</html>
