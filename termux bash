@@ -1,0 +1,22 @@
+echo "git: set GITHUB_REMOTE=<url> to add origin and push"
+  fi
+fi
+
+echo "done: $ROOT"
+creating target: /data/data/com.termux/files/home/github-repos/linq2                        wrote: .gitignore
+wrote: README.md
+wrote: linq2.manifest.json
+wrote: tools/index.sh                         wrote: tools/dev.sh
+wrote: tools/build_core.sh                    wrote: tools/gen_flow_doc.py
+wrote: core/CMakeLists.txt
+wrote: core/include/linq2/validator.hpp       wrote: core/src/validator.cpp                 wrote: core/src/main.cpp                      wrote: backend/requirements.txt               wrote: backend/requirements-termux.txt
+wrote: backend/.env.example
+wrote: backend/app/data/partners.json
+wrote: backend/app/data/flow_manifest.json
+wrote: backend/app/__init__.py                wrote: backend/app/config.py                  wrote: backend/app/db.py                      wrote: backend/app/models.py                  wrote: backend/app/core_native.py             wrote: backend/app/security.py                wrote: backend/app/deps.py                    wrote: backend/app/schemas.py                 wrote: backend/app/partners/__init__.py       wrote: backend/app/partners/base.py           wrote: backend/app/partners/handoff.py        wrote: backend/app/partners/webhook.py        wrote: backend/app/partners/registry.py       wrote: backend/app/services/__init__.py       wrote: backend/app/services/audit.py          wrote: backend/app/services/payments.py       wrote: backend/app/services/router_engine.py
+wrote: backend/app/services/indexer.py        wrote: backend/app/routers/__init__.py        wrote: backend/app/routers/health.py          wrote: backend/app/routers/auth.py            wrote: backend/app/routers/partners.py        wrote: backend/app/routers/payments.py        wrote: backend/app/routers/submissions.py     wrote: backend/app/routers/db_admin.py        wrote: backend/app/routers/index.py           wrote: backend/app/main.py                    wrote: backend/app/native/.gitkeep            wrote: backend/tests/test_flow.py             wrote: frontend/package.json                  wrote: frontend/vite.config.js                wrote: frontend/.env.example                  wrote: frontend/index.html                    wrote: frontend/src/main.jsx                  wrote: frontend/src/api.js                    wrote: frontend/src/components/PartnerPicker.jsx                                            wrote: frontend/src/components/Forms.jsx      wrote: frontend/src/components/Result.jsx
+wrote: frontend/src/App.jsx                   wrote: frontend/src/styles.css                files written: 56, skipped: 0                 7 built backend/app/native/liblinq2core.so and build/linq2_cli
+wrote docs/FLOW_MANIFEST.md
+indexed 53 files, 200 symbols, 22 routes
+git: set GITHUB_REMOTE=<url> to add origin and push
+done: /data/data/com.termux/files/home/github-repos/linq2
