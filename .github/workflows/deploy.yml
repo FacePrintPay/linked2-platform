@@ -1,24 +1,37 @@
-name: Deploy
+name: Deploy LiNQ2 to GitHub Pages
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  ci:
-    uses: ./.github/workflows/ci.yml
-
-  deploy_staging:
-    needs: ci
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    environment: staging
     steps:
-      - run: echo "Deploy to staging"
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  deploy_production:
-    needs: deploy_staging
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - run: echo "Deploy to production"
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './pages'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
